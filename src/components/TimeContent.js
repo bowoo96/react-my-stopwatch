@@ -1,16 +1,15 @@
-import React from 'react'
+import React,{useState} from 'react'
 
-const TimeContent = () => {
-
+const TimeContent = (props) => {
 
     return (
         <div>
             <h1>Stopwatch</h1>
             <h2>Vanilla JavaScript Stopwatch</h2>
             <p>
-                <span id="minute">00</span>:
-                <span id="second">00</span>.
-                <span id="mili_second">00</span>
+                <span id="minute">{props.enteredTime[2]}</span>:
+                <span id="second">{props.enteredTime[1]}</span>.
+                <span id="mili_second">{props.enteredTime[0]}</span>
             </p>
         </div>
     )
